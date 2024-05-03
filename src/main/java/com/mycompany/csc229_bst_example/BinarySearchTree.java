@@ -52,9 +52,10 @@ public class BinarySearchTree<root> {
         doInOrder(this.root);
     }
 
+    // ToDo 1: complete InOrder Traversal]
     private void doInOrder(BstNode root) {
 
-        // ToDo 1: complete InOrder Traversal]
+
         if (root != null) {
             doInOrder(root.getLeft());
             System.out.println(root.getData()+" ");
@@ -67,8 +68,9 @@ public class BinarySearchTree<root> {
         doPreOrder(this.root);
     }
 
+    // ToDo 2: complete the pre-order traversal.
     private void doPreOrder(BstNode root){
-        // ToDo 2: complete the pre-order traversal.
+
             if (root != null) {
                 System.out.print(root.getData()+" ");
                 doPreOrder(root.getLeft());
@@ -79,9 +81,9 @@ public class BinarySearchTree<root> {
     public Integer findHeight() {
 
         return findTreeHeight(this.root);
-    }// ToDo 3: Find the height of a tree
+    }
 
-
+    // ToDo 3: Find the height of a tree
     private Integer  findTreeHeight(BstNode root){
         if (root == null){
             return -1;
@@ -99,9 +101,10 @@ public class BinarySearchTree<root> {
 
     public int getDepth(BstNode node) {
         return getTreeDepth(this.root);
-        //ToDo 4: complete getDepth of a node 
+
     }
 
+    //ToDo 4: complete getDepth of a node
     private int getTreeDepth(BstNode root) {
         if (root == null){
             return -1;
@@ -120,9 +123,10 @@ public class BinarySearchTree<root> {
         printTree(root, prefix);
 
 
-        // ToDo 5: complete the print of the BST
+
     }
 
+    // ToDo 5: complete the print of the BST
     private void printTree(BstNode node, String prefix) {
 
         if (root == null){
