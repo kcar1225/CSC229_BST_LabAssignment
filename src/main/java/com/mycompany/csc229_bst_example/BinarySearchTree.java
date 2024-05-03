@@ -57,9 +57,9 @@ public class BinarySearchTree<root> {
 
 
         if (root != null) {
-            doInOrder(root.getLeft());
-            System.out.println(root.getData()+" ");
-            doInOrder(root.getRight());
+            doInOrder(root.getLeft()); //visits left nodes
+            System.out.println(root.getData()+" "); //process
+            doInOrder(root.getRight()); ////visits right nodes
 
         }
 
@@ -71,10 +71,10 @@ public class BinarySearchTree<root> {
     // ToDo 2: complete the pre-order traversal.
     private void doPreOrder(BstNode root){
 
-            if (root != null) {
-                System.out.print(root.getData()+" ");
-                doPreOrder(root.getLeft());
-                doPreOrder(root.getRight());
+            if (root != null) {   //condition to check if tree is empty
+                System.out.print(root.getData()+" "); //process root
+                doPreOrder(root.getLeft()); //visits left nodes
+                doPreOrder(root.getRight());//visits right nodes
             }
     }
 
@@ -88,12 +88,12 @@ public class BinarySearchTree<root> {
         if (root == null){
             return -1;
         }
-        else {
+        else {   //find right and left height and return the larger as the tree height
             int leftHeight = findTreeHeight(root.getLeft());
-            int rigthHeight= findTreeHeight(root.getRight());
+            int rightHeight= findTreeHeight(root.getRight());
 
 
-            return Math.max(leftHeight, rigthHeight);
+            return Math.max(leftHeight, rightHeight);
         }
 
     }
@@ -109,7 +109,7 @@ public class BinarySearchTree<root> {
         if (root == null){
             return -1;
         }
-
+        //find right and left depth and return the larger as the tree depth
         int leftDepth = getTreeDepth(root.getLeft());
         int rightDepth = getTreeDepth(root.getRight());
 
