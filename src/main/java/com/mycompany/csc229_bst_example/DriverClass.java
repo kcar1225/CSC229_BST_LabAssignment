@@ -9,8 +9,8 @@ package com.mycompany.csc229_bst_example;
  * @author MoaathAlrajab
  */
 public class DriverClass {
-    public static void main(String a[]) {
- 
+    public static void main(String[] a) {
+
         BinarySearchTree bst = new BinarySearchTree();
         bst.insert(8);
         bst.insert(10);
@@ -24,7 +24,10 @@ public class DriverClass {
         System.out.println("\n-------------------");
         System.out.println("In Order Traversal");
         bst.inOrderTraversal();
-        
-        bst.print();
+
+
+
+        // Call the print method from the BinarySearchTree class
+        bst.print("");
     }
 }
